@@ -32,7 +32,7 @@ import javax.swing.JRadioButton;
 /**
  * Application for RaceCarFacts Project.
  * Allows the user to learn about 6 different race cars, 3 being rally race cars and 3 being track race cars.
- * The GUI will display page containig a picture of the car, some simple facts, and a description.
+ * The GUI will display a page containing a picture of the car, some simple facts, and a description.
  * The user can choose whether or not the GUI will display rally cars or track cars by using the top two buttons.
  * The next car button will change the page to the next car in the List, respective to which type of car is selected via the top buttons.
  * The user can also save the facts and description of the displayed car to their own file using the save button.
