@@ -7,4 +7,4 @@ Allows you to view pages about track cars or rally cars. Each car page will show
 * Creating a Java GUI using Swing
 * GUI Design and image implementation
 * Reading from and writing to files
-* More advanced usage of classes and objects
+* Intermediate usage of classes and objects
