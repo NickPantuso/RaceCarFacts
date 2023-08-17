@@ -70,6 +70,7 @@ public class RaceCarApp extends JFrame {
 	 * Create the frame.
 	 */
 	public RaceCarApp() {
+		//create background
 		setBackground(Color.WHITE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 950, 600);
@@ -78,21 +79,25 @@ public class RaceCarApp extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
+
+		//read the txt file and make car objects
 		readFile();
 		List<RallyCar> rallyCars = makeRallyCars();
 		List<TrackCar> trackCars = makeTrackCars();
-		
+
+		//create top buttons
 		JRadioButton rallyRdbtn = new JRadioButton("Rally Cars");
 		JRadioButton trackRdbtn = new JRadioButton("Track Cars");
 		JPanel selectCarType = new JPanel();
 		createSelectCarType(selectCarType, rallyRdbtn, trackRdbtn);
-		
+
+		//set image and facts
 		image.setIcon(new ImageIcon(RaceCarApp.class.getResource(rallyCars.get(0).getImage())));
 		insertFacts.setText(rallyCars.get(0).toString());
 		JPanel imagePanel = new JPanel();
 		createImagePanel(imagePanel, image, insertFacts);
-		
+
+		//set description and next/save buttons
 		JButton nextButton = new JButton("Next Car");
 		JButton saveButton = new JButton("Save Facts & Description");
 		desc.setText("<html>" + rallyCars.get(0).getDesc() + "</html>");
